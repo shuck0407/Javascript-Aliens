@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>UFO Finder</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"">
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+  <link rel="stylesheet" href="static/css/style.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="container">
+      <div class="jumbotron">
+        <h1>UFO Sightings</h1>
+          <p>We are not alone...</p>
+      </div>
+    </div>
+    <div class="container">
+      <form>
+        <div class="form-row">
+          <div class="col">
+            <input type="text" class="form-control" id="date" placeholder="Date">
+          </div>                
+          <div class="col">
+            <input type="text" class="form-control" id="city" placeholder="City">
+          </div>
+          <div class="col">
+            <input type="text" class="form-control" id="state" placeholder="State">
+          </div>   
+          <div class="col">
+            <input type="text" class="form-control" id="country" placeholder="Country">
+          </div>   
+          <div class="col">
+            <input type="text" class="form-control" id="shape" placeholder="Shape">
+          </div>  
+          <div class="col">
+            <input type="button" value="Filter Data" onclick="buttonClick()"/>
+          </div>
+          <div class="col" >
+            <input type="reset" value="Clear Filters" onclick="clearFilters(this.form)"/>
+        </div>
+      </form>
+    </div>
+            
+    <div class="container">
+
+      <div class="row margin-top-50">
+        <div class="col-md-10">
+          <div id="table-area" class="">
+            <table id="ufo-table" class="table table-bordered table-hover">
+              <thead>
+                <tr>
+                  <th class="table-head">Date</th>
+                  <th class="table-head">City</th>
+                  <th class="table-head">State</th>
+                  <th class="table-head">Country</th>
+                  <th class="table-head">Shape</th>
+                  <th class="table-head">Duration</th>
+                  <th class="table-head">Comments</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+   
+  </div>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/crossfilter/1.3.12/crossfilter.js"></script>
+  <script src="static/js/data.js"></script>
+  <script src="static/js/app.js"></script>
+  <script src="static/js/table-builder.js" type="module" ></script>
+</body>
+
+</html>
