@@ -14,7 +14,7 @@ function TableBuilder(tabledata) {
   
   };
 
-function filterData() {
+function filterData(loaded_dict) {
 
   //set the filteredData object equal to the original table data
   let filteredData = tableData;
@@ -84,8 +84,11 @@ function buttonClick() {
     };
   });
 
+  //make sure the user-entered filter fields are correct
+  console.log(loaded_dict);
+  
   //run the filterData function to render only the filtered data
-  filterData();
+  filterData(loaded_dict);
   
 };
 
@@ -103,6 +106,11 @@ function clearFilters(oForm) {
     };
      
   };
+  
+  //Initialize the dictionaries that hold the filter values
+  var filter_dict = {};
+  var loaded_dict = {};
+  
   //redraw the table with the original data
   var tableData = data;
   TableBuilder(tableData);
