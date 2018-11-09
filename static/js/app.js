@@ -49,6 +49,10 @@ function buttonClick() {
 
   //This function runs when the user clicks on the "Filter" button
   
+  //Initialize the dictionaries that hold the filter fields
+  var filter_dict = {};
+  var loaded_dict = {};
+  
   // Select the filter elements and get the raw HTML node
   let filterDate = d3.select("#date");
   let filterCity = d3.select("#city");
